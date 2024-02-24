@@ -1,27 +1,27 @@
 {
-    "id": "CAABDF01",
-    "path": "~/Desktop/thesis-vignettes/rpw.R",
-    "project_path": "rpw.R",
+    "id": "32663A19",
+    "path": "~/Desktop/thesis-vignettes/varilly2.R",
+    "project_path": "varilly2.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1707532180014.0,
+    "created": 1708814552731.0,
     "source_on_save": false,
-    "relative_order": 2,
+    "relative_order": 4,
     "properties": {
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "116,21",
-        "scrollLine": "107"
+        "cursorPosition": "25,0",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1707549572,
+    "lastKnownWriteTime": 1708816943,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1707549572327,
+    "last_content_update": 1708816943100,
     "read_only": false,
     "read_only_alternatives": []
 }
