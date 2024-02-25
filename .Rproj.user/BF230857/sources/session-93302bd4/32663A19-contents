@@ -2,7 +2,7 @@
 library(parallel)
 
 # Function that returns TRUE if the finite-population Galton-Watson process contains an isomorphic subtree to (R,g) such that kappa(L) = Lambda(phi(L)); FALSE otherwise.
-simulate <- function(z){
+simulate <- function(z, N){
   # Draw the number of nodes in generation i, n[i]
   n <- c()
   for (i in 1:4) {
@@ -14,12 +14,16 @@ simulate <- function(z){
     }
   }
   # Whether generation 4 includes the label \kappa(r_{41}) = 4 is Bernoulli with probability 1 - (9/10)^n[4]
-  if(runif(1) < 1 - (9/10)^n[4]){
+  if(runif(1) < 1 - ((N-1)/N)^n[4]){
     return(T)
   }else{
     return(F)
   }
 }
 
-res <- mclapply(1:1e6, simulate, mc.cores = 12)
+res <- mclapply(1:1e6, simulate, N = 10, mc.cores = 12)
+mean(unlist(res))
+
+## Repeat experiment for N = 1000
+res <- mclapply(1:1e6, simulate, N = 100, mc.cores = 12)
 mean(unlist(res))
