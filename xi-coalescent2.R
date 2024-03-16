@@ -1,7 +1,7 @@
 ## Simulation for Example 3.6
 library(parallel)
 
-# Function that returns TRUE if the finite-population Galton-Watson process contains an isomorphic subtree to (R,g) such that kappa(L) = Lambda(phi(L)); FALSE otherwise.
+# Function that returns TRUE if the labeled Galton-Watson process contains an isomorphic subtree to (R,g) such that A(L) = B(phi(L)); FALSE otherwise.
 simulate <- function(z, N){
   # Draw the number of nodes in generation i, n[i]
   n <- c()
@@ -28,7 +28,7 @@ mean(unlist(res))
 res <- mclapply(1:1e6, simulate, N = 100, mc.cores = 12)
 mean(unlist(res))
 
-# Function that returns TRUE if the finite-population Galton-Watson process contains a UNIQUE isomorphic subtree to (R,g) such that kappa(L) = Lambda(phi(L)); FALSE otherwise.
+# Function that returns TRUE if the labeled Galton-Watson process contains a UNIQUE isomorphic subtree to (R,g) such that A(L) = B(phi(L)); FALSE otherwise.
 simulate_unique <- function(z, N){
   # Draw the number of nodes in generation i, n[i]
   n <- c()
@@ -78,7 +78,7 @@ simulate_unique <- function(z, N){
   }
 }
 
-N <- 100
+N <- 10
 
 res_unique <- mclapply(1:1e6, simulate_unique, N = N, mc.cores = 12)
 mean(unlist(res_unique))
@@ -107,8 +107,4 @@ coalescent <- function(N){
   choose(N-1, 3) * factorial(3) * (1/N)^sum(ds) * prod((exp((get_qs(N) - 1)*2) * 2^ds) / factorial(ds))
 }
 coalescent(N)
-
-
-#(1/N) * (exp((1 - 1/N) - 1) * 2^ds)
-
 
