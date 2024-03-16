@@ -1,27 +1,27 @@
 {
-    "id": "32663A19",
-    "path": "~/Desktop/thesis-vignettes/xi-coalescent2.R",
-    "project_path": "xi-coalescent2.R",
+    "id": "712F6E8E",
+    "path": "~/Desktop/thesis-vignettes/xi-coalescent3.R",
+    "project_path": "xi-coalescent3.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1708814552731.0,
+    "created": 1710621691580.0,
     "source_on_save": false,
-    "relative_order": 4,
+    "relative_order": 7,
     "properties": {
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "108,13",
-        "scrollLine": "83"
+        "cursorPosition": "24,17",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1710575542,
+    "lastKnownWriteTime": 1710621846,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1710575542468,
+    "last_content_update": 1710621846037,
     "read_only": false,
     "read_only_alternatives": []
 }
